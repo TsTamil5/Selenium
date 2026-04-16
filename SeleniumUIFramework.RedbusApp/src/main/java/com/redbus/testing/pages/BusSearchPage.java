@@ -1,21 +1,25 @@
 package com.redbus.testing.pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BusSearchPage {
 	
 	
-	   WebDriver driver;
-
-	    public BusSearchPage(WebDriver driver) {
-	        this.driver = driver;
-	        PageFactory.initElements(driver, this); 
-	        
-	    }
+	private WebDriver driver;
+	private WebDriverWait wait;
+	public BusSearchPage(WebDriver driver) {
+		this.driver = driver;
+		 this.wait = new WebDriverWait(driver, Duration.ofSeconds(25));
+		  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+	}
 
 	@FindBy(id = "srcinput")
 	private WebElement from;
@@ -31,9 +35,6 @@ public class BusSearchPage {
 
 	@FindBy(css = ".dateInputWrapper___d7048e.dateHighlight___1149de")
 	private WebElement datePicker;
-	
-//	@FindBy(className = "dateInputWrapper___d7048e dateHighlight___1149de")
-//	private WebElement datePicker;
 
 	@FindBy(css = "[type='checkbox']")
 	private WebElement bookForWomen;
@@ -65,7 +66,6 @@ public class BusSearchPage {
 	
 	public void enterFrom(String source) throws InterruptedException  {
 	    getFrom().sendKeys(source);
-	    Thread.sleep(5000);
 	    getFrom().sendKeys(Keys.DOWN);
 	    getFrom().sendKeys(Keys.ENTER);
 	    
@@ -76,9 +76,8 @@ public class BusSearchPage {
 	    return destination;
 	}
 	
-	public void enterDestination(String dest) throws InterruptedException {
+	public void enterDestination(String dest)  {
 	    getDestination().sendKeys(dest);
-	    Thread.sleep(5000);
 	    getDestination().sendKeys(Keys.DOWN);
 	    getDestination().sendKeys(Keys.ENTER);
 	    
