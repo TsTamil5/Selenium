@@ -9,10 +9,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class restaurant_serving_page {
+public class popularfood_restaurant_serving_page {
 	private WebDriver driver;
     private WebDriverWait wait;
-	public restaurant_serving_page(WebDriver driver) {
+	public popularfood_restaurant_serving_page(WebDriver driver) {
 		 this.driver = driver;
 		 this.wait = new WebDriverWait(driver, Duration.ofSeconds(25));
 	}
