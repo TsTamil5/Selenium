@@ -12,6 +12,11 @@ import java.util.Random;
 import java.util.Set;
 import java.util.UUID;
 
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.Point;
@@ -164,6 +169,42 @@ public class AllUtililtyFunction {
 			fos.close();
 		}
 		
+		//Excel
+		
+		public String getExcelData(String sheetName, int rowNum, int cellNum) throws IOException {
+			FileInputStream fis = new FileInputStream("./src/test/resources/Readers/Config.xlsx");
+			Workbook wb = new XSSFWorkbook(fis);
+			Sheet sheet = wb.getSheet(sheetName);
+
+			Row row = sheet.getRow(rowNum);
+			Cell cell = row.getCell(cellNum);
+
+			String data = cell.toString();
+
+			wb.close();
+			return data;
+		}
+
+		public void setExcelData(String sheetName, int rowNum, int cellNum, String value) throws IOException {
+			FileInputStream fis = new FileInputStream("./src/test/resources/Readers/Train Ticket.xlsx");
+			Workbook wb = new XSSFWorkbook(fis);
+			Sheet sheet = wb.getSheet(sheetName);
+
+			Row row = sheet.getRow(rowNum);
+			if (row == null) row = sheet.createRow(rowNum);
+
+			Cell cell = row.getCell(cellNum);
+			if (cell == null) cell = row.createCell(cellNum);
+
+			cell.setCellValue(value);
+
+			FileOutputStream fos = new FileOutputStream("./src/test/resources/Readers/Train Ticket.xlsx");
+			wb.write(fos);
+
+			wb.close();
+			fos.close();
+		}
+
 		Actions act;
 
 //		public ActionsUtility(WebDriver driver) {
