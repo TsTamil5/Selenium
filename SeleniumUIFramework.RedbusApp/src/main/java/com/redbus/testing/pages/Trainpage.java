@@ -11,14 +11,12 @@ public class Trainpage {
     WebDriver driver;
     WebDriverWait wait;
 
-    // ✅ Constructor fixed
     public Trainpage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
         wait = new WebDriverWait(driver, Duration.ofSeconds(15));
     }
 
-    // 🔹 LOCATORS
 
     @FindBy(xpath = "//span[contains(text(),'Train tickets')]")
     private WebElement trainTab;
@@ -35,7 +33,7 @@ public class Trainpage {
     @FindBy(xpath = "//div[contains(@class,'train')]")
     private WebElement results;
 
-    // 🔹 METHODS
+
 
     public void clickTrainTickets() {
         wait.until(ExpectedConditions.elementToBeClickable(trainTab)).click();
@@ -43,10 +41,8 @@ public class Trainpage {
 
     public void enterSource(String src) {
 
-        // Close calendar if open
         driver.findElement(By.tagName("body")).sendKeys(Keys.ESCAPE);
 
-        // Click source container
         WebElement sourceContainer = wait.until(
                 ExpectedConditions.elementToBeClickable(
                         By.xpath("//div[contains(@class,'srcDestWrapper')]//div[1]")
@@ -55,11 +51,9 @@ public class Trainpage {
 
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", sourceContainer);
 
-        // Dynamic input
         WebElement activeInput = driver.switchTo().activeElement();
         activeInput.sendKeys(src);
 
-        // Select suggestion
         WebElement suggestion = wait.until(
                 ExpectedConditions.visibilityOfElementLocated(By.xpath("//li[contains(@class,'suggestion')]"))
         );

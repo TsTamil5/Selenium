@@ -55,7 +55,7 @@ public class TrainTicket {
 
     @When("user selects journey date")
     public void user_selects_journey_date() {
-        page.selectJourneyDate();   // ✅ FIXED
+        page.selectJourneyDate();   
     }
 
     @When("user clicks on search button")
@@ -67,9 +67,9 @@ public class TrainTicket {
     public void train_results_should_be_displayed() {
 
         if (page.isResultsDisplayed()) {
-            System.out.println("✅ Train results displayed");
+            System.out.println("Train results displayed");
         } else {
-            System.out.println("❌ Test Failed");
+            System.out.println("Test Failed");
         }
 
         driver.quit();
