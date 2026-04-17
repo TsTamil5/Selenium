@@ -3,8 +3,8 @@ package com.redbus.testing.pages;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.*;
 import org.openqa.selenium.support.ui.*;
-
 import java.time.Duration;
+import java.util.List;
 
 public class Trainpage {
 
@@ -13,89 +13,66 @@ public class Trainpage {
 
     public Trainpage(WebDriver driver) {
         this.driver = driver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         PageFactory.initElements(driver, this);
-        wait = new WebDriverWait(driver, Duration.ofSeconds(15));
     }
 
+    // FROM field
+    @FindBy(xpath = "//input[@id='src']")
+    private WebElement fromInput;
 
-    @FindBy(xpath = "//span[contains(text(),'Train tickets')]")
-    private WebElement trainTab;
+    // TO field
+    @FindBy(xpath = "//input[@id='dest']")
+    private WebElement toInput;
 
-    @FindBy(xpath = "//input[contains(@placeholder,'Date')]")
-    private WebElement date;
+    // Date field
+    @FindBy(xpath = "//input[@id='onwardCal']")
+    private WebElement dateInput;
 
-    @FindBy(xpath = "//td[not(contains(@class,'disabled'))][1]")
-    private WebElement selectDate;
+    // Suggestions list
+    @FindBy(xpath = "//ul[contains(@class,'autoFill')]//li")
+    private List<WebElement> suggestions;
 
+    // Search button
     @FindBy(xpath = "//button[contains(text(),'Search')]")
     private WebElement searchBtn;
 
-    @FindBy(xpath = "//div[contains(@class,'train')]")
-    private WebElement results;
+    // ========== ACTION METHODS ========== //
 
+    public void enterFrom(String fromCity) {
+        wait.until(ExpectedConditions.elementToBeClickable(fromInput)).click();
+        fromInput.clear();
+        fromInput.sendKeys(fromCity);
 
-
-    public void clickTrainTickets() {
-        wait.until(ExpectedConditions.elementToBeClickable(trainTab)).click();
+        selectFromDropdown(fromCity);
     }
 
-    public void enterSource(String src) {
+    public void enterTo(String toCity) {
+        wait.until(ExpectedConditions.elementToBeClickable(toInput)).click();
+        toInput.clear();
+        toInput.sendKeys(toCity);
 
-        driver.findElement(By.tagName("body")).sendKeys(Keys.ESCAPE);
-
-        WebElement sourceContainer = wait.until(
-                ExpectedConditions.elementToBeClickable(
-                        By.xpath("//div[contains(@class,'srcDestWrapper')]//div[1]")
-                )
-        );
-
-        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", sourceContainer);
-
-        WebElement activeInput = driver.switchTo().activeElement();
-        activeInput.sendKeys(src);
-
-        WebElement suggestion = wait.until(
-                ExpectedConditions.visibilityOfElementLocated(By.xpath("//li[contains(@class,'suggestion')]"))
-        );
-        suggestion.click();
+        selectFromDropdown(toCity);
     }
 
-    public void enterDestination(String dest) {
+    public void selectFromDropdown(String text) {
+        wait.until(ExpectedConditions.visibilityOfAllElements(suggestions));
 
-        WebElement destContainer = wait.until(
-                ExpectedConditions.elementToBeClickable(
-                        By.xpath("//div[contains(@class,'srcDestWrapper')]//div[2]")
-                )
-        );
-
-        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", destContainer);
-
-        WebElement activeInput = driver.switchTo().activeElement();
-        activeInput.sendKeys(dest);
-
-        WebElement suggestion = wait.until(
-                ExpectedConditions.visibilityOfElementLocated(By.xpath("//li[contains(@class,'suggestion')]"))
-        );
-        suggestion.click();
+        for (WebElement option : suggestions) {
+            if (option.getText().toLowerCase().contains(text.toLowerCase())) {
+                option.click();
+                break;
+            }
+        }
     }
 
-    public void selectJourneyDate() {
+    public void selectDate(String dateXpath) {
+        wait.until(ExpectedConditions.elementToBeClickable(dateInput)).click();
 
-        wait.until(ExpectedConditions.elementToBeClickable(date)).click();
-
-        WebElement availableDate = wait.until(
-                ExpectedConditions.elementToBeClickable(
-                        By.xpath("//td[not(contains(@class,'disabled'))]")
-                )
-        );
-        availableDate.click();
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(dateXpath))).click();
     }
 
     public void clickSearch() {
         wait.until(ExpectedConditions.elementToBeClickable(searchBtn)).click();
-    }
-
-    public boolean isResultsDisplayed() {
-        return wait.until(ExpectedConditions.visibilityOf(results)).isDisplayed();
     }
 }
