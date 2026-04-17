@@ -44,6 +44,9 @@ public class HotelsPage {
 	
 	@FindBy(xpath = "//div[@role='option']//span")
 	private List<WebElement> ageOptions;
+
+	@FindBy(xpath="//section[@data-autoid='flashDeals']//article[@role='button']")
+	private List<WebElement> flashDealCards;
 	
 	public WebElement getCityName() {
 		return cityName;
@@ -161,6 +164,14 @@ public class HotelsPage {
 	
 	public List<WebElement> getAgeOptions() {
 	    return ageOptions;
+	}
+	
+	public List<WebElement> getFlashDealCards() {
+		return flashDealCards;
+	}
+
+	public void clickFlashDealCard(int index) {
+		getFlashDealCards().get(index).click();
 	}
 	
 }

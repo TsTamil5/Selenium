@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="22" passed="4" failed="18" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-04-17T15:22:36 IST" name="Default suite" finished-at="2026-04-17T15:24:30 IST" duration-ms="113896">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.redbus.testing.testrunner.RunnerIO@24269709]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2026-04-17T15:22:36 IST" name="Default test" finished-at="2026-04-17T15:24:30 IST" duration-ms="113896">
+      <class name="com.redbus.testing.testrunner.RunnerIO">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.redbus.testing.testrunner.RunnerIO@24269709]" started-at="2026-04-17T15:22:37 IST" name="setUpClass" finished-at="2026-04-17T15:22:37 IST" duration-ms="477" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@66863941]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.redbus.testing.testrunner.RunnerIO@24269709]" started-at="2026-04-17T15:22:37 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-17T15:22:39 IST" duration-ms="1859" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login to redbus"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login Feature"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'user clicks on Accounts' and 5 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user clicks on Accounts")
+public void user_clicks_on_accounts() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("user clicks on Login button")
+public void user_clicks_on_login_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("user enters mobile number")
+public void user_enters_mobile_number() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("user click on captcha checkbox")
+public void user_click_on_captcha_checkbox() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("user clicks on Continue button")
+public void user_clicks_on_continue_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("user clicks on Verify button")
+public void user_clicks_on_verify_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'user clicks on Accounts' and 5 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user clicks on Accounts")
+public void user_clicks_on_accounts() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("user clicks on Login button")
+public void user_clicks_on_login_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("user enters mobile number")
+public void user_enters_mobile_number() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("user click on captcha checkbox")
+public void user_click_on_captcha_checkbox() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("user clicks on Continue button")
+public void user_clicks_on_continue_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("user clicks on Verify button")
+public void user_clicks_on_verify_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.user clicks on Accounts(file:///C:/Users/sivap/OneDrive/Documents/Selenium/SeleniumUIFramework.RedbusApp/src/test/java/com/redbus/testing/featurefiles/Accounts.feature:4)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.redbus.testing.testrunner.RunnerIO@24269709]" started-at="2026-04-17T15:22:39 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-17T15:22:45 IST" duration-ms="6512" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Navigate to the Hotels page and validate user can successfully reach the Hotels page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Hotels Feature"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.redbus.testing.testrunner.RunnerIO@24269709]" started-at="2026-04-17T15:22:45 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-17T15:22:52 IST" duration-ms="6434" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Click a hotel from Flash Deals section and validate hotel details page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Hotels Feature"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.redbus.testing.testrunner.RunnerIO@24269709]" started-at="2026-04-17T15:22:52 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-17T15:22:59 IST" duration-ms="7337" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Click a hotel from Flash Deals section and validate hotel details page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Hotels Feature"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.redbus.testing.testrunner.RunnerIO@24269709]" started-at="2026-04-17T15:22:59 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-17T15:23:05 IST" duration-ms="6118" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Click a hotel from Flash Deals section and validate hotel details page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Hotels Feature"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.redbus.testing.testrunner.RunnerIO@24269709]" started-at="2026-04-17T15:23:05 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-17T15:23:13 IST" duration-ms="7317" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search hotels with valid data from excel"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Hotels Feature"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.apache.poi.ss.usermodel.Sheet.getRow(int)" because "sheet" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.apache.poi.ss.usermodel.Sheet.getRow(int)" because "sheet" is null
+at com.redbus.testing.utilities.AllUtililtyFunction.getExcelData(AllUtililtyFunction.java:179)
+at com.redbus.testing.stepdefinition.HotelsStepDefinition.enter_city_name_from_excel_sheet_row(HotelsStepDefinition.java:52)
+at ✽.Enter city name from excel sheet "HotelsData" row 1(file:///C:/Users/sivap/OneDrive/Documents/Selenium/SeleniumUIFramework.RedbusApp/src/test/java/com/redbus/testing/featurefiles/SearchHotels.feature:27)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.redbus.testing.testrunner.RunnerIO@24269709]" started-at="2026-04-17T15:23:13 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-17T15:23:22 IST" duration-ms="9657" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search hotels with children added without age using excel"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Hotels Feature"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.apache.poi.ss.usermodel.Sheet.getRow(int)" because "sheet" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.apache.poi.ss.usermodel.Sheet.getRow(int)" because "sheet" is null
+at com.redbus.testing.utilities.AllUtililtyFunction.getExcelData(AllUtililtyFunction.java:179)
+at com.redbus.testing.stepdefinition.HotelsStepDefinition.enter_city_name_from_excel_sheet_row(HotelsStepDefinition.java:52)
+at ✽.Enter city name from excel sheet "HotelsData" row 2(file:///C:/Users/sivap/OneDrive/Documents/Selenium/SeleniumUIFramework.RedbusApp/src/test/java/com/redbus/testing/featurefiles/SearchHotels.feature:39)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.redbus.testing.testrunner.RunnerIO@24269709]" started-at="2026-04-17T15:23:22 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-17T15:23:30 IST" duration-ms="7432" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search hotels with children and child age using excel"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Hotels Feature"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.apache.poi.ss.usermodel.Sheet.getRow(int)" because "sheet" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.apache.poi.ss.usermodel.Sheet.getRow(int)" because "sheet" is null
+at com.redbus.testing.utilities.AllUtililtyFunction.getExcelData(AllUtililtyFunction.java:179)
+at com.redbus.testing.stepdefinition.HotelsStepDefinition.enter_city_name_from_excel_sheet_row(HotelsStepDefinition.java:52)
+at ✽.Enter city name from excel sheet "HotelsData" row 3(file:///C:/Users/sivap/OneDrive/Documents/Selenium/SeleniumUIFramework.RedbusApp/src/test/java/com/redbus/testing/featurefiles/SearchHotels.feature:52)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.redbus.testing.testrunner.RunnerIO@24269709]" started-at="2026-04-17T15:23:30 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-17T15:23:36 IST" duration-ms="6194" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Apply filters and verify Clear Filter is enabled"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Hotels Feature"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.apache.poi.ss.usermodel.Sheet.getRow(int)" because "sheet" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.apache.poi.ss.usermodel.Sheet.getRow(int)" because "sheet" is null
+at com.redbus.testing.utilities.AllUtililtyFunction.getExcelData(AllUtililtyFunction.java:179)
+at com.redbus.testing.stepdefinition.HotelsStepDefinition.enter_city_name_from_excel_sheet_row(HotelsStepDefinition.java:52)
+at ✽.Enter city name from excel sheet "HotelsData" row 4(file:///C:/Users/sivap/OneDrive/Documents/Selenium/SeleniumUIFramework.RedbusApp/src/test/java/com/redbus/testing/featurefiles/SearchHotels.feature:66)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.redbus.testing.testrunner.RunnerIO@24269709]" started-at="2026-04-17T15:23:36 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-17T15:23:44 IST" duration-ms="7654" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Apply filters and verify Clear Filter is enabled"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Hotels Feature"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.apache.poi.ss.usermodel.Sheet.getRow(int)" because "sheet" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.apache.poi.ss.usermodel.Sheet.getRow(int)" because "sheet" is null
+at com.redbus.testing.utilities.AllUtililtyFunction.getExcelData(AllUtililtyFunction.java:179)
+at com.redbus.testing.stepdefinition.HotelsStepDefinition.enter_city_name_from_excel_sheet_row(HotelsStepDefinition.java:52)
+at ✽.Enter city name from excel sheet "HotelsData" row 4(file:///C:/Users/sivap/OneDrive/Documents/Selenium/SeleniumUIFramework.RedbusApp/src/test/java/com/redbus/testing/featurefiles/SearchHotels.feature:66)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.redbus.testing.testrunner.RunnerIO@24269709]" started-at="2026-04-17T15:23:44 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-17T15:23:49 IST" duration-ms="5355" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Apply filters and verify Clear Filter is enabled"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Hotels Feature"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.apache.poi.ss.usermodel.Sheet.getRow(int)" because "sheet" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.apache.poi.ss.usermodel.Sheet.getRow(int)" because "sheet" is null
+at com.redbus.testing.utilities.AllUtililtyFunction.getExcelData(AllUtililtyFunction.java:179)
+at com.redbus.testing.stepdefinition.HotelsStepDefinition.enter_city_name_from_excel_sheet_row(HotelsStepDefinition.java:52)
+at ✽.Enter city name from excel sheet "HotelsData" row 4(file:///C:/Users/sivap/OneDrive/Documents/Selenium/SeleniumUIFramework.RedbusApp/src/test/java/com/redbus/testing/featurefiles/SearchHotels.feature:66)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.redbus.testing.testrunner.RunnerIO@24269709]" started-at="2026-04-17T15:23:49 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-17T15:23:55 IST" duration-ms="6294" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Apply filters and verify Clear Filter is enabled"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Hotels Feature"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.apache.poi.ss.usermodel.Sheet.getRow(int)" because "sheet" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.apache.poi.ss.usermodel.Sheet.getRow(int)" because "sheet" is null
+at com.redbus.testing.utilities.AllUtililtyFunction.getExcelData(AllUtililtyFunction.java:179)
+at com.redbus.testing.stepdefinition.HotelsStepDefinition.enter_city_name_from_excel_sheet_row(HotelsStepDefinition.java:52)
+at ✽.Enter city name from excel sheet "HotelsData" row 4(file:///C:/Users/sivap/OneDrive/Documents/Selenium/SeleniumUIFramework.RedbusApp/src/test/java/com/redbus/testing/featurefiles/SearchHotels.feature:66)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.redbus.testing.testrunner.RunnerIO@24269709]" started-at="2026-04-17T15:23:55 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-17T15:24:02 IST" duration-ms="6576" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify system shows message when no hotels match selected filters"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Hotels Feature"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.apache.poi.ss.usermodel.Sheet.getRow(int)" because "sheet" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.apache.poi.ss.usermodel.Sheet.getRow(int)" because "sheet" is null
+at com.redbus.testing.utilities.AllUtililtyFunction.getExcelData(AllUtililtyFunction.java:179)
+at com.redbus.testing.stepdefinition.HotelsStepDefinition.enter_city_name_from_excel_sheet_row(HotelsStepDefinition.java:52)
+at ✽.Enter city name from excel sheet "HotelsData" row 5(file:///C:/Users/sivap/OneDrive/Documents/Selenium/SeleniumUIFramework.RedbusApp/src/test/java/com/redbus/testing/featurefiles/SearchHotels.feature:87)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.redbus.testing.testrunner.RunnerIO@24269709]" started-at="2026-04-17T15:24:02 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-17T15:24:08 IST" duration-ms="6329" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify system shows message when no hotels match selected filters"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Hotels Feature"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.apache.poi.ss.usermodel.Sheet.getRow(int)" because "sheet" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.apache.poi.ss.usermodel.Sheet.getRow(int)" because "sheet" is null
+at com.redbus.testing.utilities.AllUtililtyFunction.getExcelData(AllUtililtyFunction.java:179)
+at com.redbus.testing.stepdefinition.HotelsStepDefinition.enter_city_name_from_excel_sheet_row(HotelsStepDefinition.java:52)
+at ✽.Enter city name from excel sheet "HotelsData" row 5(file:///C:/Users/sivap/OneDrive/Documents/Selenium/SeleniumUIFramework.RedbusApp/src/test/java/com/redbus/testing/featurefiles/SearchHotels.feature:87)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.redbus.testing.testrunner.RunnerIO@24269709]" started-at="2026-04-17T15:24:08 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-17T15:24:10 IST" duration-ms="1885" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search train tickets with valid details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Train Ticket Booking on RedBus"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.io.FileNotFoundException">
+            <message>
+              <![CDATA[.\src\main\resources\data.properties (The system cannot find the file specified)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.io.FileNotFoundException: .\src\main\resources\data.properties (The system cannot find the file specified)
+at java.base/java.io.FileInputStream.open0(Native Method)
+at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+at java.base/java.io.FileInputStream.<init>(FileInputStream.java:111)
+at com.redbus.testing.utilities.AllUtililtyFunction.getPropertyKeyValue(AllUtililtyFunction.java:156)
+at com.redbus.testing.stepdefinition.TrainTicket.user_navigates_to_red_bus_website(TrainTicket.java:35)
+at ✽.user navigates to RedBus website(file:///C:/Users/sivap/OneDrive/Documents/Selenium/SeleniumUIFramework.RedbusApp/src/test/java/com/redbus/testing/featurefiles/TrainTickets.feature:5)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.io.FileNotFoundException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.redbus.testing.testrunner.RunnerIO@24269709]" started-at="2026-04-17T15:24:10 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-17T15:24:12 IST" duration-ms="2158" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search trains without entering mandatory fields"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Train Ticket Booking on RedBus"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.io.FileNotFoundException">
+            <message>
+              <![CDATA[.\src\main\resources\data.properties (The system cannot find the file specified)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.io.FileNotFoundException: .\src\main\resources\data.properties (The system cannot find the file specified)
+at java.base/java.io.FileInputStream.open0(Native Method)
+at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+at java.base/java.io.FileInputStream.<init>(FileInputStream.java:111)
+at com.redbus.testing.utilities.AllUtililtyFunction.getPropertyKeyValue(AllUtililtyFunction.java:156)
+at com.redbus.testing.stepdefinition.TrainTicket.user_navigates_to_red_bus_website(TrainTicket.java:35)
+at ✽.user navigates to RedBus website(file:///C:/Users/sivap/OneDrive/Documents/Selenium/SeleniumUIFramework.RedbusApp/src/test/java/com/redbus/testing/featurefiles/TrainTickets.feature:5)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.io.FileNotFoundException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.redbus.testing.testrunner.RunnerIO@24269709]" started-at="2026-04-17T15:24:12 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-17T15:24:14 IST" duration-ms="2133" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate same source and destination"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Train Ticket Booking on RedBus"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.io.FileNotFoundException">
+            <message>
+              <![CDATA[.\src\main\resources\data.properties (The system cannot find the file specified)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.io.FileNotFoundException: .\src\main\resources\data.properties (The system cannot find the file specified)
+at java.base/java.io.FileInputStream.open0(Native Method)
+at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+at java.base/java.io.FileInputStream.<init>(FileInputStream.java:111)
+at com.redbus.testing.utilities.AllUtililtyFunction.getPropertyKeyValue(AllUtililtyFunction.java:156)
+at com.redbus.testing.stepdefinition.TrainTicket.user_navigates_to_red_bus_website(TrainTicket.java:35)
+at ✽.user navigates to RedBus website(file:///C:/Users/sivap/OneDrive/Documents/Selenium/SeleniumUIFramework.RedbusApp/src/test/java/com/redbus/testing/featurefiles/TrainTickets.feature:5)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.io.FileNotFoundException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.redbus.testing.testrunner.RunnerIO@24269709]" started-at="2026-04-17T15:24:14 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-17T15:24:19 IST" duration-ms="4866" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Select a future journey date"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Train Ticket Booking on RedBus"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.io.FileNotFoundException">
+            <message>
+              <![CDATA[.\src\main\resources\data.properties (The system cannot find the file specified)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.io.FileNotFoundException: .\src\main\resources\data.properties (The system cannot find the file specified)
+at java.base/java.io.FileInputStream.open0(Native Method)
+at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+at java.base/java.io.FileInputStream.<init>(FileInputStream.java:111)
+at com.redbus.testing.utilities.AllUtililtyFunction.getPropertyKeyValue(AllUtililtyFunction.java:156)
+at com.redbus.testing.stepdefinition.TrainTicket.user_navigates_to_red_bus_website(TrainTicket.java:35)
+at ✽.user navigates to RedBus website(file:///C:/Users/sivap/OneDrive/Documents/Selenium/SeleniumUIFramework.RedbusApp/src/test/java/com/redbus/testing/featurefiles/TrainTickets.feature:5)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.io.FileNotFoundException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.redbus.testing.testrunner.RunnerIO@24269709]" started-at="2026-04-17T15:24:19 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-17T15:24:21 IST" duration-ms="1998" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Select a past journey date"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Train Ticket Booking on RedBus"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.io.FileNotFoundException">
+            <message>
+              <![CDATA[.\src\main\resources\data.properties (The system cannot find the file specified)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.io.FileNotFoundException: .\src\main\resources\data.properties (The system cannot find the file specified)
+at java.base/java.io.FileInputStream.open0(Native Method)
+at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+at java.base/java.io.FileInputStream.<init>(FileInputStream.java:111)
+at com.redbus.testing.utilities.AllUtililtyFunction.getPropertyKeyValue(AllUtililtyFunction.java:156)
+at com.redbus.testing.stepdefinition.TrainTicket.user_navigates_to_red_bus_website(TrainTicket.java:35)
+at ✽.user navigates to RedBus website(file:///C:/Users/sivap/OneDrive/Documents/Selenium/SeleniumUIFramework.RedbusApp/src/test/java/com/redbus/testing/featurefiles/TrainTickets.feature:5)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.io.FileNotFoundException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.redbus.testing.testrunner.RunnerIO@24269709]" started-at="2026-04-17T15:24:21 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-17T15:24:23 IST" duration-ms="2242" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["View train details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Train Ticket Booking on RedBus"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.io.FileNotFoundException">
+            <message>
+              <![CDATA[.\src\main\resources\data.properties (The system cannot find the file specified)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.io.FileNotFoundException: .\src\main\resources\data.properties (The system cannot find the file specified)
+at java.base/java.io.FileInputStream.open0(Native Method)
+at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+at java.base/java.io.FileInputStream.<init>(FileInputStream.java:111)
+at com.redbus.testing.utilities.AllUtililtyFunction.getPropertyKeyValue(AllUtililtyFunction.java:156)
+at com.redbus.testing.stepdefinition.TrainTicket.user_navigates_to_red_bus_website(TrainTicket.java:35)
+at ✽.user navigates to RedBus website(file:///C:/Users/sivap/OneDrive/Documents/Selenium/SeleniumUIFramework.RedbusApp/src/test/java/com/redbus/testing/featurefiles/TrainTickets.feature:5)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.io.FileNotFoundException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.redbus.testing.testrunner.RunnerIO@24269709]" started-at="2026-04-17T15:24:23 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-17T15:24:26 IST" duration-ms="2815" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Select a train from results"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Train Ticket Booking on RedBus"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.io.FileNotFoundException">
+            <message>
+              <![CDATA[.\src\main\resources\data.properties (The system cannot find the file specified)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.io.FileNotFoundException: .\src\main\resources\data.properties (The system cannot find the file specified)
+at java.base/java.io.FileInputStream.open0(Native Method)
+at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+at java.base/java.io.FileInputStream.<init>(FileInputStream.java:111)
+at com.redbus.testing.utilities.AllUtililtyFunction.getPropertyKeyValue(AllUtililtyFunction.java:156)
+at com.redbus.testing.stepdefinition.TrainTicket.user_navigates_to_red_bus_website(TrainTicket.java:35)
+at ✽.user navigates to RedBus website(file:///C:/Users/sivap/OneDrive/Documents/Selenium/SeleniumUIFramework.RedbusApp/src/test/java/com/redbus/testing/featurefiles/TrainTickets.feature:5)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.io.FileNotFoundException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.redbus.testing.testrunner.RunnerIO@24269709]" started-at="2026-04-17T15:24:26 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-17T15:24:30 IST" duration-ms="3849" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Book ticket successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Train Ticket Booking on RedBus"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.io.FileNotFoundException">
+            <message>
+              <![CDATA[.\src\main\resources\data.properties (The system cannot find the file specified)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.io.FileNotFoundException: .\src\main\resources\data.properties (The system cannot find the file specified)
+at java.base/java.io.FileInputStream.open0(Native Method)
+at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+at java.base/java.io.FileInputStream.<init>(FileInputStream.java:111)
+at com.redbus.testing.utilities.AllUtililtyFunction.getPropertyKeyValue(AllUtililtyFunction.java:156)
+at com.redbus.testing.stepdefinition.TrainTicket.user_navigates_to_red_bus_website(TrainTicket.java:35)
+at ✽.user navigates to RedBus website(file:///C:/Users/sivap/OneDrive/Documents/Selenium/SeleniumUIFramework.RedbusApp/src/test/java/com/redbus/testing/featurefiles/TrainTickets.feature:5)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.io.FileNotFoundException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.redbus.testing.testrunner.RunnerIO@24269709]" started-at="2026-04-17T15:24:30 IST" name="tearDownClass" finished-at="2026-04-17T15:24:30 IST" duration-ms="280" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.redbus.testing.testrunner.RunnerIO -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

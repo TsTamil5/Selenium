@@ -1,11 +1,29 @@
+//package com.redbus.testing.testrunner;
+//
+//import io.cucumber.testng.AbstractTestNGCucumberTests;
+//import io.cucumber.testng.CucumberOptions;
+//
+//@CucumberOptions(features= {"src\\test\\java\\com\\redbus\\testing\\featurefiles\\SearchHotels.feature"},
+//glue="stepdefinition",
+//dryRun=false)
+//public class RunnerIO extends AbstractTestNGCucumberTests{
+//	
+//}
 package com.redbus.testing.testrunner;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
-@CucumberOptions(features= {""},
-glue="stepdefinition",
-dryRun=false)
-public class RunnerIO extends AbstractTestNGCucumberTests{
-	
+@CucumberOptions(
+	features = "src/test/java/com/redbus/testing/featurefiles",
+	glue = "com.redbus.testing.stepdefinition",
+	plugin = {
+			"pretty",
+			"html:target/cucumber-report.html",
+			"json:target/cucumber.json"
+	},
+	monochrome = true
+)
+public class RunnerIO extends AbstractTestNGCucumberTests {
+
 }
