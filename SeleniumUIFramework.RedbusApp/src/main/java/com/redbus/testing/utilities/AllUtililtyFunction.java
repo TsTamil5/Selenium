@@ -16,6 +16,7 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Keys;
@@ -153,7 +154,7 @@ public class AllUtililtyFunction {
 		
 		// read
 		public String getPropertyKeyValue(String key) throws IOException {
-			FileInputStream fs = new FileInputStream("./src/main/resources/data.properties");
+			FileInputStream fs = new FileInputStream("./src/test/resources/Readers/CommonData.properties");
 			Properties prop = new Properties();
 			prop.load(fs);
 			String value = prop.getProperty(key);
@@ -162,7 +163,7 @@ public class AllUtililtyFunction {
 
 		// write
 		public void setPropertyKyeValue(String key, String value) throws IOException {
-			FileOutputStream fos = new FileOutputStream("./src/main/java/orangehrm_common_data/commondata.properties");
+			FileOutputStream fos = new FileOutputStream("./src/test/resources/Readers/CommonData.properties");
 			Properties prop = new Properties();
 			prop.setProperty(key, value);
 			prop.store(fos, "Updated common data");
@@ -171,19 +172,25 @@ public class AllUtililtyFunction {
 		
 		//Excel
 		
-		public String getExcelData(String sheetName, int rowNum, int cellNum) throws IOException {
-			FileInputStream fis = new FileInputStream("./src/test/resources/Readers/Config.xlsx");
-			Workbook wb = new XSSFWorkbook(fis);
-			Sheet sheet = wb.getSheet(sheetName);
+		public String getExcelData(String sheetName, int row, int cell) {
 
-			Row row = sheet.getRow(rowNum);
-			Cell cell = row.getCell(cellNum);
+	        String value = "";
 
-			String data = cell.toString();
+	        try {
+	            FileInputStream fis = new FileInputStream("src/test/resources/Readers/Config.xlsx");
+	            XSSFWorkbook workbook = new XSSFWorkbook(fis);
+	            XSSFSheet sheet = workbook.getSheet(sheetName);
 
-			wb.close();
-			return data;
-		}
+	            value = sheet.getRow(row).getCell(cell).toString();
+
+	            workbook.close();
+
+	        } catch (Exception e) {
+	            e.printStackTrace();
+	        }
+
+	        return value;
+	    }
 
 		public void setExcelData(String sheetName, int rowNum, int cellNum, String value) throws IOException {
 			FileInputStream fis = new FileInputStream("./src/test/resources/Readers/Train Ticket.xlsx");
