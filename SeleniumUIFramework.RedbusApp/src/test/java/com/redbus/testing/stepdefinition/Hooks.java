@@ -1,7 +1,28 @@
 package com.redbus.testing.stepdefinition;
 
-import com.redbus.testing.utilities.AllUtililtyFunction;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Hooks extends AllUtililtyFunction{
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 
+public class Hooks {
+    public static WebDriver driver;
+
+    @Before
+    public void setup() {
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        
+        driver.get("https://www.redbus.in/");
+    }
+
+    @After
+    public void teardown() {
+        //driver.quit();
+    }
+
+    public static WebDriver getDriver() {
+        return driver;
+    }
 }
